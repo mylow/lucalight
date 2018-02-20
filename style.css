@@ -1,0 +1,574 @@
+/*
+Theme Name: Lucalight
+Author: Milo Sherman
+Author URI: twitter.com/suremen
+Description: wordpress theme for lucalight.com
+Version: 1.0
+
+*/
+
+
+* {
+	padding:0;
+	border:none;    
+}
+	
+body {
+	font-size:100%;
+	line-height:24px;
+	color:	#333333;
+	font-family: Verdana, Geneva, sans-serif;
+}
+	
+#wrapper {
+	max-width: 940px;
+	margin:40px auto 20px auto;
+	background-color:white;
+}
+
+div#logo img {
+	width:200px;
+	float:left;
+	padding:0px 0px 20px 0;
+}
+	
+#cssmenu {
+	background: #ffffff;
+	width: auto;
+	padding:40px 0px 40px 15px;
+    float:right;
+}
+
+#cssmenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	display: block;
+	zoom: 1;
+}
+
+#cssmenu ul li {
+	float:left;
+	display: block;
+	padding: 0;
+}
+
+#cssmenu ul li a {
+	color: #f96502;
+	text-decoration: none;
+	display: block;
+	padding:  15px 25px 15px 25px;
+	font-family: sans-serif;
+	font-size: 16px;
+	position: relative;
+	-webkit-transition: color .25s;
+	-moz-transition: color .25s;
+	-ms-transition: color .25s;
+	-o-transition: color .25s;
+	transition: color .25s;
+}
+
+#cssmenu ul li a:hover {
+	color: #00375c;
+}
+
+#cssmenu ul li a:hover:before {
+	width: 100%;
+}
+
+#cssmenu ul li a:before {
+	content: '';  /*was gallery*/
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 0;
+	background: 	#809BAE;
+	-webkit-transition: width .25s;
+	-moz-transition: width .25s;
+	-ms-transition: width .25s;
+	-o-transition: width .25s;
+	transition: width .25s;
+}
+
+#cssmenu ul li.last > a:after,
+#cssmenu ul li:last-child > a:after {
+	display: none;
+}
+
+#cssmenu ul li.active a, 
+.current_page_ancestor a, 
+.current-page-ancestor a, 
+.current-page-ancestor .current-page-ancestor a, 
+.current-menu-item a, 
+.current_page_item a {
+	color: #00375c!important;
+}
+#cssmenu ul li.active a:before,
+.current-menu-item a:before,
+.current_page_item a:before,
+.current-page-ancestor a:before {
+	width: 100%!important;
+}
+
+#aboutmenu {
+	float:right;
+	margin: 14px 165px 0px 0px;
+}
+
+#productsmenu {
+	float:right;
+	/*padding: 14px 93px 0px 0px;*/
+    clear:both;
+}
+
+#productsmenu #menu-products li {
+    list-style: none;
+    float:left;
+}
+
+#aboutmenu a.active,
+#productsmenu a.active,
+#projectsmenu a.active, 
+.current_page_ancestor a, 
+.current-page-ancestor a, 
+.current-page-ancestor .current-page-ancestor a, 
+.current-menu-item a, 
+.current_page_item a {
+	color: #00375c!important;
+}
+
+#aboutmenu a,
+#productsmenu a,
+#projectsmenu a  {
+	font-family:sans-serif;
+	font-size:14px;
+	color: #f96502;
+	text-decoration:none;
+	padding-left:2em;
+}
+
+/*iframe {
+	border:0px;
+	padding:0;
+	margin:0px;
+	width:940px;
+	height:350px;
+}*/	
+
+#gallery {
+	clear:both;
+	font-family:sans-serif;
+}
+
+#about {
+	clear:both;
+	font-family:sans-serif;
+	max-width:960px;
+	float:left;
+}
+
+/* width 960px pages 
+
+normal:570px
+
+.page-id-16 #about,
+.page-id-21 #about,
+.page-id-31 #about,
+.page-id-40 #about {
+    max-width:960px;
+}
+
+/* end 960px stuff */
+
+#about a {
+	text-decoration:none;
+}
+
+#intro1 {
+	font-family:sans-serif;
+	width:580px;
+	float:left;
+}
+
+#intro1 p {
+	font-weight:0;
+}
+
+#intro2 {
+	font-family:sans-serif;
+	width:300px;
+	float:right;
+}
+
+#intro2 p {
+	color:#f96502;
+	font-style:italic;
+	font-size:20px;
+	line-height:30px;
+	font-weight:250;
+}
+
+#aside {
+	clear:both;
+	font-family:sans-serif;
+	width:300px;
+	float:right;
+	border:6px #FCB280 solid;
+}
+
+#tech {
+	clear:both;
+	font-family:sans-serif;
+	width:350px;
+	float:left;
+}
+
+#caption {
+	clear:both;
+	font-family:sans-serif;
+	float:right;
+	font-size:12px;
+	padding:0px 60px 0px 0px;
+}
+
+#gallery img{
+	height:200px;
+}
+
+#s {
+	font-family:sans-serif;
+	width:630px;
+	float:left;
+}
+
+#links {
+	font-family:sans-serif;
+	width:224px;
+	float:right;
+	border:3px #FCB280 solid;
+	padding:20px 20px;
+	margin:40px 0px 30px 0px;
+}
+
+#links p {
+	font-size:14px;
+	line-height:20px;
+}
+
+#links p a {
+	text-decoration: none;
+	color:black;
+}
+
+#links p a:hover {
+	color:blue;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size:34px;
+	font-weight:100;
+	color:#00375C;
+	line-height:40px;
+}
+
+hr {
+	height: 3px; 
+	background-color: #809BAE;
+}
+
+img.diagram {
+	width:300px;
+	float:right;
+	margin: 150px 20px 0px 0px;
+}
+
+img.toppics {
+	width:300px;
+	float:right;
+	margin: 36px 20px 0px 20px;
+}
+
+#sales {
+	float:right;
+}
+
+#sales table {
+	margin:0;
+	width:940px;
+}
+
+#sales table td.left {
+	width:280px;
+	vertical-align:top;
+	padding: 20px 18px 20px 0;
+}
+
+#sales table td.right {
+	width:280px;
+	vertical-align:top;
+	padding: 20px 0 20px 18px;
+}
+
+#sales table td {
+	font-size:100%;
+	line-height:24px;
+	color: #333333;
+	font-family: sans-serif;
+	
+}
+
+#gallery a {
+	text-decoration:none;
+	font-family:sans-serif;
+}
+
+#map iframe {
+	width:940px;
+	height:350px;
+	border:1px solid #aaa;
+	border-radius:10px;
+}
+
+#map p {
+	font-family:sans-serif;
+	font-size:13px;
+}
+
+footer {
+	float:left;
+    max-width:960px;
+    width:100%;
+}
+
+footer table {
+	margin:20px 0 0 0;
+	width:880px;
+}
+
+footer table td {
+	width:235px;
+	vertical-align:top;
+	padding:8px;
+	color:#00375C;
+	font-family:sans-serif;
+	font-size:12px;
+}
+
+footer table td a {
+	color:#f96502;
+}
+
+footer table td ul {
+	margin-left:30px;
+}
+
+footer table td ul li {
+	display:inline;
+}
+
+div#valid {
+	text-align:center;
+	font-family:sans-serif;
+	clear:both;
+}
+
+#main-img {
+    width:100%;
+    margin:3em 0;
+    border:.1px solid black;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.slicknav_menu {
+    background: white!important;
+}
+
+.slicknav_menu .slicknav_menutxt {
+    display: none;
+}
+.slicknav_menu .slicknav_brand {
+    padding:0;
+}
+
+.slicknav_menu .slicknav_icon {
+    margin:0!important;
+}
+
+.slicknav_menu .slicknav_nav a {
+    color:black!important;
+}
+
+.product-img {
+    width:75px;
+    float:left;
+}
+
+#about h2 {
+    clear:both;
+    float:none;
+}
+
+#screen-download img {
+    box-shadow: 5px 5px 2.5px #888888;
+}
+
+#screen-download img:hover {
+    opacity:.5;
+}
+
+figcaption {
+    margin-left:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:420px) {
+   .product-img {
+        width:75px;
+        float:none;
+        clear:both;
+        margin-left:40%;
+    } 
+    #about p {
+        margin-left:5px!important;
+        padding-left:0px!important;
+        clear:both;
+    }
+    img.toppics {
+        float: none;
+        clear:both;
+    }
+}
+
+@media screen and (min-width: 521px) {
+    .slicknav_menu {
+        display: none;
+        background-color:white!important;
+    }
+}
+
+@media screen and (max-width:520px) {
+     #logo {
+        display: none;
+    }
+    
+    #cssmenu {
+        display: none;
+    }
+    #main-img {
+        margin:0;
+    }
+}
+
+@media screen and (max-width:415px) {
+    #productsmenu{
+        float:none;
+        clear:both;
+    }
+}
+
+@media screen and (max-width:720px) {
+    #logo {
+        clear:both;
+    }
+    #cssmenu {
+        float:left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    #wrapper {
+        margin:0;
+    }
+    /*#logo {
+        float:left;
+    }
+    
+    /*#cssmenu {
+        padding:0;
+        clear:both;
+    }
+    #cssmenu ul li {
+		float: none;
+	}
+
+	#cssmenu ul li a {
+		width: 100%;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+  
+	#cssmenu ul li a:after {
+		display: none;
+	}
+
+	#cssmenu ul li a:before {
+		height: 1px;
+		background: #f96502;
+		width: 100%;
+		opacity: .2;
+	}
+
+	#cssmenu ul li.last > a:before,
+	#cssmenu ul li:last-child > a:before {
+		display: none;
+	}*/
+    
+}
+@media screen and (max-width:830px) {
+    footer, footer table {
+        width:100%;
+    }
+    footer table td {
+        width:100%;
+        float:left;
+        text-align: center;
+        padding:10px 0;
+    }
+    footer table td p {
+        margin:0;
+    }
+    #main-img {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #intro1, #intro2 {
+        clear:both;
+        float:none;
+        width:100%;
+    }
+}
+@media screen and (max-width: 920px) {
+    #s, #links {
+        float:none;
+        clear:both;
+        width:90%;
+    }
+    figure {
+        margin:auto;
+    }
+    /*figure img {
+        width:100%;
+    }*/
+}
